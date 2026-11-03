@@ -1,0 +1,12 @@
+name: Build and test
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - name: Build and test Rust
+        run: make rust
+      - name: Build C and run filesystem and network tests
+        run: make test

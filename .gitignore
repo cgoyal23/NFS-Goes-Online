@@ -1,0 +1,6 @@
+build/
+rust-web/target/
+*.img
+__pycache__/
+*.pyc
+.DS_Store
